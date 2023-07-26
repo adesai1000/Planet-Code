@@ -5,28 +5,28 @@ const FeaturedProducts = ({type}) => {
   const data = [
     {
       id: 1,
-      img: "https://media.cnn.com/api/v1/images/stellar/prod/230601124453-01-apollo-for-reddit-app.jpg?c=4x3",
+      img: "https://techcrunch.com/wp-content/uploads/2022/09/apollo-reddit-lockscreen.jpg",
       title: "Applo - Reddit Client for iOS",
       oldPrice: 1999,
       price: 999
     },
     {
       id: 2,
-      img: "https://hips.hearstapps.com/hmg-prod/images/mastodon-what-is-mastodon-is-it-really-the-new-twitter-1668515957.jpg?crop=0.670xw:1.00xh;0.0691xw,0&resize=1200:*",
+      img: "https://techcrunch.com/wp-content/uploads/2023/07/mastodon-app-android.png?w=1024",
       title: "Mastodon Social",
       oldPrice: 999,
       price: 499
     },
     {
       id: 3,
-      img: "https://miro.medium.com/v2/resize:fit:1400/1*xOqCfciF90c8nH0HhMpapQ.png",
+      img: "https://2984022599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfJjIdV9cuW6K8asJjTPJ%2Fuploads%2FI4D8jYsLyhrZV5LUUsdm%2FBlue%20Pink%20Gradient%20Fashion%20Banner.png?alt=media&token=0dec188c-bbf1-4bec-aaa1-3f0f37c73724",
       title: "Supabase",
       oldPrice: 29999,
       price: 19999
     },
     {
       id: 4,
-      img: "https://b.thumbs.redditmedia.com/N4p0uZaKXDqoQEtUQL3jYyxiL5U44l-PZtHlfh_NiDQ.png",
+      img: "https://i.ibb.co/XsTgrCh/boost-for-reddit-removebg-preview.png",
       title: "Boost - Reddit Client for Android",
       oldPrice: 999,
       price: 499
