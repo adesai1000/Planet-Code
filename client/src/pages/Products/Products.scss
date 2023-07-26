@@ -1,0 +1,20 @@
+.products{
+        padding: 00px 50px;
+        display: flex;
+    .left{
+        flex: 1;
+        position: sticky;
+        height: 100%;
+        top: 00px;            
+        }
+    .right{
+        flex: 3;
+        
+        .catImg{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 50px;
+        }
+    }
+}

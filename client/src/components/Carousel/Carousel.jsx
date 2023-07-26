@@ -1,6 +1,6 @@
 import React from 'react';
 import banner from '../../images/banner.png';
-import './Carousel.scss'; // Import the SCSS file
+import './Carousel.scss'; 
 
 const Carousel = () => {
   return (

@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="center">
-        <img src={PlanetCode} alt="Planet Code Logo"/>
+        <Link to="/"><img src={PlanetCode}/></Link>
         </div>
         <div className="right">
         <div className="item">
