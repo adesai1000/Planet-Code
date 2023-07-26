@@ -3,8 +3,8 @@ import './Product.scss'
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0)
   const images = [
-    "https://crast.net/img/2023/06/4-reasons-very-personal-to-get-the-iPhone-14-Pro.jpg",
-    "https://th-i.thgim.com/public/sci-tech/technology/1xi2mw/article66043533.ece/alternates/FREE_1200/iPhone%2014%20Pro%20image.png"
+    "https://techcrunch.com/wp-content/uploads/2022/09/apollo-reddit-lockscreen.jpg",
+    "https://techcrunch.com/wp-content/uploads/2023/07/mastodon-app-android.png?w=1024"
   ]
   return (
     <div className='product'>
