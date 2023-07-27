@@ -7,6 +7,7 @@
     padding: 20px;
     border: 2px solid;
     border-color: #00ba7c;
+    border-radius: 3px;
   
     h1 {
       margin-bottom: 30px;
@@ -72,6 +73,8 @@
       color: white;
       font-weight: 500;
       margin-bottom: 20px;
+      border-radius: 4px;
+      font-size: 17px;
     }
   
     .reset{
@@ -81,5 +84,6 @@
       border: 2px solid;
       padding: 5px;
       border-color: #00ba7c;
+      border-radius: 3px;
     }
   }

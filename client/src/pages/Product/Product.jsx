@@ -24,12 +24,7 @@ const Product = () => {
       <div className="right">
         <h1>Apollo - Reddit Client for iOS</h1>
         <span className='price'>$999</span>
-        <p>Apollo is an award-winning free Reddit app for iOS with over 100K 5-star reviews, built with the community in mind, and with a focus on speed, customizability, and best in class iOS features</p>
-        <div className="quantity">
-          <button onClick={() => setQaunt((prev)=> prev ===1? 1: prev-1)}>-</button>
-          {quant}
-          <button onClick={()=>setQaunt(prev=>prev+1)}>+</button>
-        </div>
+        <p>Apollo is an award-winning free Reddit app for iOS with over 100K 5-star reviews, built with the community in mind, and with a focus on speed, customizability, and best in class iOS features.</p>
         <button className="add">
         <img src={bag30}/> Add to bag
         </button>

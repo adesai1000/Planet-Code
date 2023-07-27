@@ -40,33 +40,13 @@
       font-size: 30px;
       color: #00ba7c;
       font-weight: 500;
+      
     }
 
     p {
       font-size: 18px;
       font-weight: 300;
       text-align: justify;
-    }
-
-    .quantity {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      button {
-    
-        width: 30px;
-        
-        font-size: 25px;
-        background-color: #00ba7c;
-        color: white;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border: none;
-      }
     }
 
     .add {
@@ -81,7 +61,10 @@
       cursor: pointer;
       border: none;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 17px;
+      gap: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
     }
     .link{
       display: flex;
