@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PCBanner from '../../images/PCBanner.png';
 import List from '../../components/List/List';
 import { useParams } from 'react-router-dom';
 import './Products.scss'

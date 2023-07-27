@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import favourite from '../../images/favourite.png';
-import earrow from '../../images/earrow.png';
 import search from '../../images/search.png';
 import cart from '../../images/cart.png';
 import user from '../../images/user.png';
@@ -8,7 +7,9 @@ import home from '../../images/home.svg';
 import PlanetCode from '../../images/PlanetCode.png'
 import { Link } from 'react-router-dom';
 import "./Navbar.scss"
+import Cart from '../Cart/Cart';
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
   return (
     <div className='navbar'>
         <div className="wrapper">
@@ -31,12 +32,15 @@ const Navbar = () => {
           <Link to="/"><img src={search}/></Link>
           <Link to="/"><img src={user}/></Link>
           <Link to="/"><img src={favourite}/></Link>
-          <div className="cartIcon"><Link to="/"><img src={cart}/></Link>
+          <div className="cartIcon" onClick={()=>setOpen(!open)}><img src={cart}/>
           <span>0</span>
           </div>
           </div>
         </div>
     </div>
+    {
+      open && <Cart />
+    }
     </div>
   )
 }
