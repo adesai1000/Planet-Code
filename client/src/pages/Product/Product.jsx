@@ -3,6 +3,8 @@ import './Product.scss'
 import bag30 from '../../images/bag30.png'
 import fav36 from  '../../images/fav36.png'
 import comp36 from '../../images/comp36.png'
+import Collapsible from 'react-collapsible';
+
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0)
   const [quant, setQaunt] = useState(1)
@@ -25,17 +27,16 @@ const Product = () => {
         <h1>Apollo - Reddit Client for iOS</h1>
         <span className='price'>$999</span>
         <p>Apollo is an award-winning free Reddit app for iOS with over 100K 5-star reviews, built with the community in mind, and with a focus on speed, customizability, and best in class iOS features.</p>
-        <button className="add">
-        <img src={bag30}/> Add to bag
-        </button>
+        
         <div className="link">
-          <div className="item">
-            <img src={fav36}/> Save for later
-          </div>
-          <div className="item">
-            <img src={comp36}/> Compare
-          </div>
+        <button className="add">
+       Add to bag
+        </button>
+        <button className="later">
+        Save for later
+        </button>
         </div>
+        
         <div className="info">
           <span>Seller: Christian Selig</span>
           <span>Product: Apollo for Reddit</span>
@@ -44,11 +45,17 @@ const Product = () => {
         </div>
         
         <div className="detail">
-          <span>Description</span>
+          <Collapsible trigger="Description">
+          <p>Apollo was an award-winning free Reddit app for iOS with over 100K 5-star reviews, built with the community in mind, and with a focus on speed, customizability, and best in class iOS features. It started development in late 2014 and ended June 2023. </p>
+          </Collapsible>
           <hr />
-          <span>Additional Info</span>
+          <Collapsible trigger="Additional Info">
+          <p>This app doesn't fetch data anymore because of the signification price hike of the Reddit API.</p>
+          </Collapsible>
           <hr />
-          <span>Need some help?</span>
+          <Collapsible trigger="Need some help?">
+          <p>For any questions relating to the product please email me at:- christian@apollo.com</p>
+          </Collapsible>
           <hr />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './FeaturedProducts.scss'
 import Card from '../Card/Card'
 const FeaturedProducts = ({type}) => {
@@ -31,7 +31,16 @@ const FeaturedProducts = ({type}) => {
       oldPrice: 999,
       price: 499
     }
-  ]
+  ];
+  const[products, setProducts] = useState([])
+
+  useEffect(()=>{
+    try{
+
+    }catch{
+      
+    }
+  }, [])
   return (
     <div className='FeaturedProducts'>
       <div className="top">

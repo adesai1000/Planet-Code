@@ -3,6 +3,7 @@ import Slider from '../../components/Carousel/Carousel'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'
 import './Home.scss'
 import Contact from '../../components/Contact/Contact'
+
 const Home = () => {
   return (
     <div className='Home'>

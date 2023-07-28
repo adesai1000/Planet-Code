@@ -1,7 +1,7 @@
 import React from 'react'
-import './Cart.scss'
+import '../Cart/Cart.scss'
 import trash20 from '../../images/trash20.png'
-const Cart = () => {
+const Later = () => {
     const data = [{
         id: 1,
         img: "https://techcrunch.com/wp-content/uploads/2022/09/apollo-reddit-lockscreen.jpg",
@@ -20,7 +20,7 @@ const Cart = () => {
 ]
     return (
         <div className='cart'>
-            <h1>Items in your bag</h1>
+            <h1>Saved for later</h1>
             {data?.map(item => (
                 <div className='item' key={item.id}>
                     <img src={item.img} alt={item.title} />
@@ -39,10 +39,10 @@ const Cart = () => {
                 <span>Total</span>
                 <span className='TotalP'>$1498</span>
             </div>
-            <button>Check Out</button>
-            <span className='reset'>Clear Bag</span>
+            <button>Add to Bag</button>
+            <span className='reset'>Clear Saved</span>
         </div>
     )
 }
 
-export default Cart
+export default Later

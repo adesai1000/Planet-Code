@@ -35,7 +35,12 @@
     display: flex;
     flex-direction: column;
     gap: 9px;
-
+    .detail{
+      cursor: pointer;
+      p{
+        font-size: 16px;
+      }
+    }
     .price {
       font-size: 30px;
       color: #00ba7c;
@@ -49,32 +54,52 @@
       text-align: justify;
     }
 
-    .add {
-      width: 200px;
-      padding: 10px;
-      background-color: #00ba7c;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      cursor: pointer;
-      border: none;
-      font-weight: 500;
-      font-size: 17px;
-      gap: 10px;
-      margin-bottom: 10px;
-      border-radius: 3px;
-    }
+    
     .link{
       display: flex;
       gap: 20px;
-      .item{
+      .add {
+        width: 200px;
+        padding: 10px;
+        background-color: #00ba7c;
+        color: white;
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: 14px;
+        justify-content: center;
+        gap: 20px;
         cursor: pointer;
+        border: none;
+        font-weight: 500;
+        font-size: 17px;
+        gap: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        &:hover {
+          background-color: #00764f;
+          color: white;
+       }
+      }
+
+      .later{
+        width: 200px;
+        padding: 10px;
+        background-color: #00ba7c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        cursor: pointer;
+        border: none;
+        font-weight: 500;
+        font-size: 17px;
+        gap: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        &:hover {
+          background-color: #00764f;
+          color: white;
+       }
       }
     }
    .info{

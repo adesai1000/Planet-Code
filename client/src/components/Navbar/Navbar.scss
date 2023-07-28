@@ -32,11 +32,18 @@ body {
             font-size: 18px;
             color: #00BA7C;
             text-decoration: none;
+            cursor: pointer;
+            &:hover {
+                color: #00764f;
+             }
         }
         .icons{
             display: flex;
             gap: 15px;
             cursor: pointer;
+            &:hover {
+                color: #00764f;
+             }
 
         .cartIcon{
             position: relative;
@@ -53,6 +60,10 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                &:hover {
+                    background-color: #00764f;
+                    color: white;
+                 }
             }
         }
         }
