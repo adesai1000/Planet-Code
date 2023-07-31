@@ -1,3 +1,33 @@
-.Profile{
+.Profile {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    z-index: 999;
     background-color: white;
-}
+    padding: 20px;
+    border: 2px solid;
+    border-color: #00ba7c;
+    border-radius: 3px;
+  
+    .btn {
+      width: 250px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #00ba7c;
+      color: white;
+      font-weight: 500;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      font-size: 17px;
+      &:hover {
+        background-color: #00764f;
+        color: white;
+     }
+    }
+
+  }
