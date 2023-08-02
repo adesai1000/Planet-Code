@@ -17,14 +17,34 @@ const Product = () => {
   return (
     <div className='product'>
       <div className="left">
-        <div className="images">
-          <img src={process.env.REACT_APP_UPLOAD_URL +data.attributes.image.data.attributes.url} onClick={e=>setSelectedImg("image")}/>
-          <img src={process.env.REACT_APP_UPLOAD_URL +data.attributes.image2.data.attributes.url} onClick={e=>setSelectedImg("image2")}/>
-        </div>
-        <div className="mainImage">
-          <img src={process.env.REACT_APP_UPLOAD_URL +data?.attributes[selectedImg]?.img2?.data.attributes?.url}/>
-        </div>
-      </div>
+            <div className="images">
+              <img
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  data?.attributes?.image?.data?.attributes?.url
+                }
+                alt=""
+                onClick={(e) => setSelectedImg("image")}
+              />
+              <img
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  data?.attributes?.img2?.data?.attributes?.url
+                }
+                alt=""
+                onClick={(e) => setSelectedImg("image2")}
+              />
+            </div>
+            <div className="mainImg">
+              <img
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  data?.attributes[selectedImg]?.data?.attributes?.url
+                }
+                alt=""
+              />
+            </div>
+          </div>
       <div className="right">
         <h1>Apollo - Reddit Client for iOS</h1>
         <span className='price'>$999</span>
