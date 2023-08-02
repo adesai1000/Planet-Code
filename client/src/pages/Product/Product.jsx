@@ -4,23 +4,25 @@ import bag30 from '../../images/bag30.png'
 import fav36 from  '../../images/fav36.png'
 import comp36 from '../../images/comp36.png'
 import Collapsible from 'react-collapsible';
+import useFetch from '../../hooks/useFetch';
+import { useParams } from 'react-router-dom'
 
 const Product = () => {
-  const [selectedImg, setSelectedImg] = useState(0)
-  const [quant, setQaunt] = useState(1)
-  const images = [
-    "https://images.unsplash.com/photo-1554672408-17407e0322ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80 ",
-    "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-  ]
+  const id = useParams().id;
+  const [selectedImg, setSelectedImg] = useState("image")
+  const { data, loading, error } = useFetch(
+    `/products/${id}`
+  );
+
   return (
     <div className='product'>
       <div className="left">
         <div className="images">
-          <img src={images[0]} onClick={e=>setSelectedImg(0)}/>
-          <img src={images[1]} onClick={e=>setSelectedImg(1)}/>
+          <img src={process.env.REACT_APP_UPLOAD_URL +data.attributes.image.data.attributes.url} onClick={e=>setSelectedImg("image")}/>
+          <img src={process.env.REACT_APP_UPLOAD_URL +data.attributes.image2.data.attributes.url} onClick={e=>setSelectedImg("image2")}/>
         </div>
         <div className="mainImage">
-          <img src={images[selectedImg]}/>
+          <img src={process.env.REACT_APP_UPLOAD_URL +data?.attributes[selectedImg]?.img2?.data.attributes?.url}/>
         </div>
       </div>
       <div className="right">

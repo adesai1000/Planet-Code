@@ -3,6 +3,7 @@ import './List.scss';
 import Card from '../Card/Card';
 import useFetch from '../../hooks/useFetch';
 
+
 const List = ({ subCats, catId }) => {
 
   const subCatsArray = Array.isArray(subCats) ? subCats : [];
@@ -12,8 +13,10 @@ const List = ({ subCats, catId }) => {
   );
 
   return (
+    
     <div className='List'>
-      {loading ? 'Loading...' : data?.map((item) => <Card item={item} key={item.id} />)}
+      {loading ? 'Loading...' 
+      : data?.map((item) => <Card item={item} key={item.id} />)}
     </div>
   );
 };
