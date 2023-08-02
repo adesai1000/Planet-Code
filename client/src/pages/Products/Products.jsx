@@ -5,9 +5,11 @@ import './Products.scss';
 import useFetch from '../../hooks/useFetch';
 
 const Products = () => {
+  const id = useParams().id;
   const catId = parseInt(useParams().id);
+
   const [selectedSC, setSelectedSC] = useState([]);
-  const { data, loading, error } = useFetch(`/categories/`);
+  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   const handleChange = (e) => {
     const value = e.target.value;
