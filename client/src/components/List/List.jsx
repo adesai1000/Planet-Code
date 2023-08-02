@@ -3,8 +3,8 @@ import './List.scss';
 import Card from '../Card/Card';
 import useFetch from '../../hooks/useFetch';
 
-const List = ({ subCats, maxPrice, Sort, catId }) => {
-  // Ensure subCats is an array before calling map
+const List = ({ subCats, catId }) => {
+
   const subCatsArray = Array.isArray(subCats) ? subCats : [];
 
   const { data, loading, error } = useFetch(
