@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import favourite from '../../images/favourite.png';
-import search from '../../images/search.png';
+import search from '../../images/search.png'; 
 import cart from '../../images/cart.png';
 import user from '../../images/user.png';
 import home from '../../images/home.svg';
@@ -10,10 +10,13 @@ import "./Navbar.scss";
 import Cart from '../Cart/Cart';
 import Later from '../Later/Later'
 import Profile from '../Profile/Profile';
+import Search from '../Search/Search';
+
 const Navbar = () => {
-  const[later, setLater] = useState(false);
-  const[open, setOpen] = useState(false); 
-  const[profile, setProfile] = useState(false); 
+  const [later, setLater] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [profile, setProfile] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   const handleSellClick = () => {
     window.open('https://forms.gle/yJJmWs8gaoiXTDtj8', '_blank');
@@ -24,11 +27,11 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="left">
           <div className="link">
-            <Link to="/"><img src={home} /></Link>
+            <Link to="/"><img src={home} alt="Home" /></Link>
           </div>
         </div>
         <div className="center">
-          <Link to="/"><img src={PlanetCode} /></Link>
+          <Link to="/"><img src={PlanetCode} alt="PlanetCode" /></Link>
         </div>
         <div className="right">
           <div className="item">
@@ -38,27 +41,28 @@ const Navbar = () => {
             <div className="item" onClick={handleSellClick}>Sell</div>
           </div>
           <div className="icons">
-            <Link to="/"><img src={search} /></Link>
-            <a onClick={()=> setProfile(!profile)}><img src={user} /></a>
-            <a onClick={() => setLater(!later)}><img src={favourite} /></a>
+            <a onClick={() => setShowSearch(!showSearch)}>
+              <img src={search} alt="Search" />
+            </a>
+            <a onClick={() => setProfile(!profile)}>
+              <img src={user} alt="User" />
+            </a>
+            <a onClick={() => setLater(!later)}>
+              <img src={favourite} alt="Favourite" />
+            </a>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
-              <img src={cart} />
+              <img src={cart} alt="Cart" />
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
-      {
-        later && <Later />
-      }
-      {
-        open && <Cart />
-      }
-      {
-        profile && <Profile />
-      }
+      {showSearch && <Search />}
+      {later && <Later />}
+      {open && <Cart />}
+      {profile && <Profile />}
     </div>
-  )
+  );
 }
 
 export default Navbar;
