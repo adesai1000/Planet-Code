@@ -10,9 +10,9 @@ import { useParams } from 'react-router-dom'
 const Product = () => {
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("image")
-  const { data, loading, error } = useFetch(
-    `/products/${id}`
-  );
+  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+  
+  console.log('data:', data);
 
   return (
     <div className='product'>
@@ -61,7 +61,6 @@ const Product = () => {
         
         <div className="info">
           <span>Seller: Christian Selig</span>
-          <span>Product: Apollo for Reddit</span>
           <span>Tag: iOS Application</span>
           <hr />
         </div>

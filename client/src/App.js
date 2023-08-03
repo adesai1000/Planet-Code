@@ -8,6 +8,7 @@ import './app.scss'
 
 const Layout = () => {
   return (
+
     <div className="app">
       <Navbar />
       <Outlet />
