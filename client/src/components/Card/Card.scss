@@ -1,8 +1,10 @@
 .Card {
-    width: 280px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+    border: 2px solid;
+    border-color: grey;
 
     .image {
         width: 100%;
@@ -44,10 +46,11 @@
         text-decoration: none;
     }
 
-    .prices {
+    .prices {   
         display: flex;
         gap: 10px;
-
+        justify-content: left;
+        font-weight: 400;
         .oldPrice {
             font-size: 16px;
             color: #00BA7C;
