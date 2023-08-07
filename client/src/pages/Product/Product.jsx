@@ -9,31 +9,21 @@ import { useParams } from 'react-router-dom'
 
 const Product = () => {
   const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState("image")
+  const [selectedImg, setSelectedImg] = useState("img")
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-  
-  console.log('data:', data);
 
+  
   return (
     <div className='product'>
-      <div className="left">
+      
+      {loading ? (
+      "Loading..."
+      ): (
+      <>
+        <div className="left">
             <div className="images">
-              <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes?.image?.data?.attributes?.url
-                }
-                alt=""
-                onClick={(e) => setSelectedImg("image")}
-              />
-              <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes?.img2?.data?.attributes?.url
-                }
-                alt=""
-                onClick={(e) => setSelectedImg("image2")}
-              />
+              <img src={process.env.REACT_APP_UPLOAD_URL +data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e)=>setSelectedImg("img")}/>
+              <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={(e)=>setSelectedImg("img2")}/>
             </div>
             <div className="mainImg">
               <img
@@ -43,7 +33,8 @@ const Product = () => {
                 }
                 alt=""
               />
-            </div>
+              
+            </div>  
           </div>
       <div className="right">
         <h1>Apollo - Reddit Client for iOS</h1>
@@ -80,8 +71,10 @@ const Product = () => {
           <hr />
         </div>
       </div>
+      </>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Product

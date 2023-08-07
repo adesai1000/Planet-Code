@@ -52,7 +52,7 @@ const Navbar = () => {
             </a>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <img src={cart} alt="Cart" />
-              <span>0</span>
+              <span>2</span>
             </div>
           </div>
         </div>

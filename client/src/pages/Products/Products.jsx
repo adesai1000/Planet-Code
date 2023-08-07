@@ -7,16 +7,21 @@ import useFetch from '../../hooks/useFetch';
 const Products = () => {
   const catId = parseInt(useParams().id);
   const [selectedSC, setSelectedSC] = useState([]);
-  const { data, loading, error } = useFetch(`/categories/`);
-
+  const { data, loading, error } = useFetch(
+    `/sub-categories?[filters][categories][id][$eq]=${catId}`
+  );
+    
   const handleChange = (e) => {
     const value = e.target.value;
     const isChecked = e.target.checked;
-    setSelectedSC((prevSelectedSC) =>
-      isChecked ? [...prevSelectedSC, value] : prevSelectedSC.filter((item) => item !== value)
+
+    setSelectedSC( 
+      isChecked
+        ? [...selectedSC, value]
+        : selectedSC.filter((item) => item !== value)
     );
   };
-
+console.log(selectedSC)
   return (
     <div className='products'>
       <div className="left">

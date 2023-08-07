@@ -4,7 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product",
+    "displayName": "Product",
     "description": ""
   },
   "options": {
@@ -17,6 +17,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "price": {
+      "type": "decimal"
     },
     "image": {
       "type": "media",
@@ -40,9 +43,6 @@
         "audios"
       ]
     },
-    "price": {
-      "type": "decimal"
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
@@ -55,19 +55,22 @@
       "target": "api::sub-category.sub-category",
       "inversedBy": "products"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "normal",
-        "trending",
-        "featured"
-      ]
-    },
     "additional_info": {
       "type": "text"
     },
     "faq_info": {
       "type": "text"
+    },
+    "SellerName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "featured",
+        "trending"
+      ]
     }
   }
 }

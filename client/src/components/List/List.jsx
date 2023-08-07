@@ -6,11 +6,11 @@ import useFetch from '../../hooks/useFetch';
 
 const List = ({ subCats, catId }) => {
 
-  const subCatsArray = Array.isArray(subCats) ? subCats : [];
-
   const { data, loading, error } = useFetch(
-    `/products?populate=*${subCatsArray.map((item) => `&[filters][id][$eq]=${item}`)}`
+    `/products?populate=*&[filters][categories][id]=${catId}${subCats.map(
+      (item) => `&[filters][sub_categories][id][$eq]=${item}`)}`
   );
+
 
   return (
     
