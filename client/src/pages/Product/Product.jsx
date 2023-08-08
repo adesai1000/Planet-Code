@@ -56,6 +56,9 @@ const Product = () => {
         <div className="info">
           <span>Seller: {data?.attributes?.SellerName}</span>
           <span>Tag:{data?.attributes?.scc}</span>
+          <span>Created On: {data?.attributes?.createdAt?.substring(0,10)}</span>
+          <span>Published On: {data?.attributes?.updatedAt?.substring(0,10)}</span>
+          <span>Last Updated: {data?.attributes?.publishedAt?.substring(0,10)}</span>
           <hr />
         </div>
         
