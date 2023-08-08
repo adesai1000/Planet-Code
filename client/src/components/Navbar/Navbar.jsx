@@ -11,12 +11,15 @@ import Cart from '../Cart/Cart';
 import Later from '../Later/Later'
 import Profile from '../Profile/Profile';
 import Search from '../Search/Search';
+import { useSelector } from 'react-redux';
+
 
 const Navbar = () => {
   const [later, setLater] = useState(false);
   const [open, setOpen] = useState(false);
   const [profile, setProfile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const products = useSelector(state => state.cart.products)
 
   const handleSellClick = () => {
     window.open('https://forms.gle/yJJmWs8gaoiXTDtj8', '_blank');
@@ -47,12 +50,12 @@ const Navbar = () => {
             <a onClick={() => setProfile(!profile)}>
               <img src={user} alt="User" />
             </a>
-            <a onClick={() => setLater(!later)}>
+            <div className='later' onClick={() => setLater(!later)}>
               <img src={favourite} alt="Favourite" />
-            </a>
+            </div>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <img src={cart} alt="Cart" />
-              <span>2</span>
+              <span>{products.length}</span>
             </div>
           </div>
         </div>

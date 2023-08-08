@@ -1,72 +1,81 @@
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .navbar{
-        height: 80px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-        .wrapper{
-            padding: 5px 20px;
-            display: flex;
-            justify-content: space-between;
-        .left{
+.navbar {
+  height: 80px;
+
+  .wrapper {
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .center {
+      img {
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+        padding-left: 180px;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: #00ba7c;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          color: #00764f;
+        }
+      }
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        cursor: pointer;
+
+        &:hover {
+          color: #00764f;
+        }
+
+        .cartIcon {
+          position: relative;
+
+          span {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #00ba7c;
+            color: white;
+            position: absolute;
+            right: -10px;
+            top: -10px;
             display: flex;
             align-items: center;
-            gap: 25px;
-        }
-        .center{
-        img{
-            width: 70px;
-            height: 70px;
             justify-content: center;
-            padding-left: 180px;
-        }
-        }
-        .right{
-            display: flex;
-            align-items: center;
-            gap: 25px;
 
-            .item{
-                display: flex;
-                align-items: center;
-                font-size: 18px;
-                color: #00BA7C;
-                text-decoration: none;
-                cursor: pointer;
-                &:hover {
-                    color: #00764f;
-                }
+            &:hover {
+              background-color: #00764f;
+              color: white;
             }
-            .icons{
-                display: flex;
-                gap: 15px;
-                cursor: pointer;
-                &:hover {
-                    color: #00764f;
-                }
-
-            .cartIcon{
-                position: relative;
-                span{
-                    font-size: 12px;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    background-color:#00BA7C ;
-                    color: white;
-                    position: absolute;
-                    right: -10px;
-                    top: -10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    &:hover {
-                        background-color: #00764f;
-                        color: white;
-                    }
-                }
-            }
-            }
+          }
         }
-        }
+      }
     }
+  }
+}
