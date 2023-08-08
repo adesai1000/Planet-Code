@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import './Product.scss'
-import bag30 from '../../images/bag30.png'
-import fav36 from  '../../images/fav36.png'
-import comp36 from '../../images/comp36.png'
 import Collapsible from 'react-collapsible';
 import useFetch from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../redux/cartReducer'
+import { addToCart, addSave } from '../../redux/cartReducer'
 
 const Product = () => {
   const id = useParams().id;
@@ -53,9 +50,6 @@ const Product = () => {
           image: data.attributes.image.data.attributes.url
         }))}>
        Add to bag
-        </button>
-        <button className="later">
-        Save for later
         </button>
         </div>
         

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import favourite from '../../images/favourite.png';
 import search from '../../images/search.png'; 
 import cart from '../../images/cart.png';
 import user from '../../images/user.png';
@@ -8,14 +7,12 @@ import PlanetCode from '../../images/PlanetCode.png';
 import { Link } from 'react-router-dom';
 import "./Navbar.scss";
 import Cart from '../Cart/Cart';
-import Later from '../Later/Later'
 import Profile from '../Profile/Profile';
 import Search from '../Search/Search';
 import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
-  const [later, setLater] = useState(false);
   const [open, setOpen] = useState(false);
   const [profile, setProfile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -50,9 +47,6 @@ const Navbar = () => {
             <a onClick={() => setProfile(!profile)}>
               <img src={user} alt="User" />
             </a>
-            <div className='later' onClick={() => setLater(!later)}>
-              <img src={favourite} alt="Favourite" />
-            </div>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <img src={cart} alt="Cart" />
               <span>{products.length}</span>
@@ -61,7 +55,6 @@ const Navbar = () => {
         </div>
       </div>
       {showSearch && <Search />}
-      {later && <Later />}
       {open && <Cart />}
       {profile && <Profile />}
     </div>

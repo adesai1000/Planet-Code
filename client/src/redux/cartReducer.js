@@ -13,7 +13,7 @@ export const cartSlice = createSlice({
             const itemIndex = state.products.findIndex(item => item.id === action.payload.id);
 
             if (itemIndex !== -1) {
-                window.alert('Item is already in your cart');
+                window.alert('Item is already in your bag');
             } else {
 
                 state.products.push({ ...action.payload, quantity: 1 });
