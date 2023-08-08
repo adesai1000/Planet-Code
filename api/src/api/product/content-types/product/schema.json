@@ -71,6 +71,9 @@
         "featured",
         "trending"
       ]
+    },
+    "scc": {
+      "type": "string"
     }
   }
 }

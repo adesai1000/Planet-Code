@@ -9,9 +9,9 @@ import { useParams } from 'react-router-dom'
 
 const Product = () => {
   const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState("img")
-  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-
+  const [selectedImg, setSelectedImg] = useState("image")
+  const { data, loading, error } = useFetch(`/products/${id}?populate=*`)
+  const formattedPrice = data?.attributes?.price.toLocaleString();
   
   return (
     <div className='product'>
@@ -22,8 +22,8 @@ const Product = () => {
       <>
         <div className="left">
             <div className="images">
-              <img src={process.env.REACT_APP_UPLOAD_URL +data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e)=>setSelectedImg("img")}/>
-              <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={(e)=>setSelectedImg("img2")}/>
+              <img src={process.env.REACT_APP_UPLOAD_URL +data?.attributes?.image?.data?.attributes?.url} alt="" onClick={(e)=>setSelectedImg("image")}/>
+              <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.image2?.data?.attributes?.url} alt="" onClick={(e)=>setSelectedImg("image2")}/>
             </div>
             <div className="mainImg">
               <img
@@ -37,9 +37,9 @@ const Product = () => {
             </div>  
           </div>
       <div className="right">
-        <h1>Apollo - Reddit Client for iOS</h1>
-        <span className='price'>$999</span>
-        <p>Apollo is an award-winning free Reddit app for iOS with over 100K 5-star reviews, built with the community in mind, and with a focus on speed, customizability, and best in class iOS features.</p>
+        <h1>{data?.attributes?.title}</h1>
+        <span className='price'>${formattedPrice}</span>
+        <p>{data?.attributes?.description}</p>
         
         <div className="link">
         <button className="add">
@@ -51,22 +51,22 @@ const Product = () => {
         </div>
         
         <div className="info">
-          <span>Seller: Christian Selig</span>
-          <span>Tag: iOS Application</span>
+          <span>Seller: {data?.attributes?.SellerName}</span>
+          <span>Tag:{data?.attributes?.scc}</span>
           <hr />
         </div>
         
         <div className="detail">
           <Collapsible trigger="Description">
-          <p>Apollo was an award-winning free Reddit app for iOS with over 100K 5-star reviews, built with the community in mind, and with a focus on speed, customizability, and best in class iOS features. It started development in late 2014 and ended June 2023. </p>
+          <p>{data?.attributes?.description}</p>
           </Collapsible>
           <hr />
           <Collapsible trigger="Additional Info">
-          <p>This app doesn't fetch data anymore because of the signification price hike of the Reddit API.</p>
+          <p>{data?.attributes?.additional_info}</p>
           </Collapsible>
           <hr />
           <Collapsible trigger="Need some help?">
-          <p>For any questions relating to the product please email me at:- christian@apollo.com</p>
+          <p>{data?.attributes?.faq_info}</p>
           </Collapsible>
           <hr />
         </div>
