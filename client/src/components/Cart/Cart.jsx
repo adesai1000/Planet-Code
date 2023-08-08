@@ -13,7 +13,14 @@ const Cart = () => {
         products.forEach((item) => (total += item.price))
         return total.toLocaleString()
     }
-
+    const  handlePayment = () => {
+    try{
+        
+    }
+    catch(err){
+        console.log(err)
+    }
+    }
     return (
         <div className='cart'>
             <h1>Items in your bag</h1>
@@ -47,7 +54,7 @@ const Cart = () => {
                 </div>
             )}
             {products.length > 0 && (
-                <button>Check Out</button>
+                <button onClick={handlePayment}>Check Out</button>
             )}
             {products.length > 0 && (
                 <span className='reset' onClick={() => dispatch(resetCart())}>Clear Bag</span>
