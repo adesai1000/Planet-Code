@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .box {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    .lol{
+      text-align: center;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .head{
+      text-align: center;
+    }
+  }
+  .confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; 
+  }
+  

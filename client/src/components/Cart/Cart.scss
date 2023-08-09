@@ -85,7 +85,7 @@
       }
     }
   
-    button {
+    .button {
       width: 250px;
       padding: 10px;
       display: flex;
@@ -100,6 +100,8 @@
       margin-bottom: 20px;
       border-radius: 4px;
       font-size: 17px;
+      text-decoration: none;
+ 
       &:hover {
         background-color: #00764f;
         color: white;

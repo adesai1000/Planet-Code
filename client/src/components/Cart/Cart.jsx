@@ -3,6 +3,8 @@ import './Cart.scss'
 import trash20 from '../../images/trash20.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeItem, resetCart } from '../../redux/cartReducer'
+import { Link } from 'react-router-dom';
+
 
 const Cart = () => {
     const products = useSelector(state => state.cart.products)
@@ -13,20 +15,12 @@ const Cart = () => {
         products.forEach((item) => (total += item.price))
         return total.toLocaleString()
     }
-    const  handlePayment = () => {
-    try{
-        
-    }
-    catch(err){
-        console.log(err)
-    }
-    }
+   
     return (
         <div className='cart'>
             <h1>Items in your bag</h1>
             {products.length === 0 ? (
-                <div className='empty-cart'><h3>Your Bag is Empty< br/>< br/>Shop Now!</h3></div>
-                
+                <div className='empty-cart'><h3>Your Bag is Empty<br/><br/>Shop Now!</h3></div>
             ) : (
                 products.map(item => (
                     <div className='item' key={item.id}>
@@ -54,7 +48,7 @@ const Cart = () => {
                 </div>
             )}
             {products.length > 0 && (
-                <button onClick={handlePayment}>Check Out</button>
+                 <Link className='button' to="/buynow">Check Out</Link>
             )}
             {products.length > 0 && (
                 <span className='reset' onClick={() => dispatch(resetCart())}>Clear Bag</span>

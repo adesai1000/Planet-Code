@@ -5,7 +5,7 @@ import useFetch from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addToCart, addSave } from '../../redux/cartReducer'
-
+import { Link } from 'react-router-dom';
 const Product = () => {
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("image")
@@ -49,8 +49,8 @@ const Product = () => {
           price: data.attributes.price,
           image: data.attributes.image.data.attributes.url
         }))}>
-       Add to bag
-        </button>
+       Add to bag </button>
+       <Link className='add' to="/buynow">Buy Now</Link>
         </div>
         
         <div className="info">
