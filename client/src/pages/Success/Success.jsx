@@ -21,14 +21,14 @@ const Success = () => {
   return (
     <div className="container">
       <div className="box">
-        <h1>Buy Request Sent!</h1>
+        <h1>Product Purchased!</h1>
         <p className='lol'>
-          You are so close we can feel it! <br />
+          Thank you for supporting indie developers!<br />
           </p>
           <h3 className='head'>So What's next?</h3>
           <p>
-          We have sent your information to the user.<br />
-        They will review and either accept or decline your offer and reach out accordingly!
+          We have sent you an invoice to your Email.<br />
+        Soon the seller will contact you to arrange the trasnfer of the ownership!
         </p>
        
       </div>

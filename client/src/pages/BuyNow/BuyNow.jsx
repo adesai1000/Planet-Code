@@ -80,18 +80,6 @@ const BuyNow = () => {
           />
         </div>
         <div>
-          <label htmlFor="priceOffer">Offer Price ($USD)</label>
-          <input
-            type="text"
-            id="priceOffer"
-            name="priceOffer"
-            placeholder="$xyz"
-            value={formData.priceOffer}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
           <label>Terms and Conditions</label>
           <div>
             <label>
@@ -101,24 +89,11 @@ const BuyNow = () => {
                 checked={formData.checkbox1}
                 onChange={handleChange}
               />{' '}
-              You agree to pay the seller if your offer is accepted.
+              You agree to the Terms and Condition.
             </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                name="checkbox2"
-                checked={formData.checkbox2}
-                onChange={handleChange}
-              />{' '}
-              Once the request is sent it cannot be cancelled.
-            </label>
-          </div>
-          <div>
           </div>
         </div>
-        <Link className='button'  to="/success/">Send Request</Link>
+        <Link className='button'  to="/success/">Buy Now</Link>
       </form>
     </div>
   );
